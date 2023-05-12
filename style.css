@@ -1,0 +1,297 @@
+body{
+    margin: 0;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+  
+}
+
+figure p {
+    font-size: 15px;
+    margin: 0;
+}
+
+figcaption{
+    text-align: center;
+}
+
+/*--Background--*/
+
+.background{
+    background-image: url(./assets/imagens/r6Background.jpg);
+    width: 100%;
+    z-index: -1;
+}
+
+/*--NavBar--*/
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: auto;
+    height: 70px;
+}
+
+.logo img{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    
+    
+}
+
+.link a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: 6%;
+}
+
+.link img {
+    width: 70px;
+    height: 70px;
+}
+
+
+/*--Capa Operadores--*/
+
+.capaOperadores img{
+    display: flex;
+    width: 100%;
+}
+
+/*--Container do conteúdo--*/
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 45px 190px;
+    font-size: 23px;
+}
+
+#container h1{
+    font-size: 29px;
+    margin-bottom: 0;
+}
+
+/*--O INFOSIX--*/
+
+.oInfoSix{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.oInfoSix img{
+    width: 320px;
+    height: 200px;
+    margin-right: 80px;
+}
+
+.oInfoSix_Txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 500px;
+}
+
+.oInfoSix_Txt h1{
+    display: flex;
+    text-align: left;
+}
+
+/*--TOM CLANCY'S--*/
+
+.tomClancys{
+    margin-top:80px;
+}
+
+.tomClancys h1{
+    display: flex;
+    text-align: left;
+    width: 810px;
+}
+
+.tomClancys img {
+    width: 140px;
+    height: 170px;
+}
+
+.tomClancys figure {
+    background-color: grey;
+}
+
+.tomClancys figure span{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.tomClancys p {
+    margin: 0;
+    margin-right: 30px;
+    width: 480px;
+}
+
+.tomClancysConteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 810px;
+}
+
+/*--O COMEÇO--*/
+
+.oComeco{
+    margin-top:70px;
+}
+
+.oComeco h1{
+    margin-bottom: 20px;
+}
+
+.oComecoConteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Img1998 {
+    display: flex;
+    flex-direction: row;
+}
+
+.oComecoTxt {
+    width: 500px;
+}
+
+.book {
+    height: 242px;
+}
+
+/*-- JOGO TÁTICO --*/
+
+.jogoTatico{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:50px;
+}
+
+.jogoTatico img{
+    width: 430px;
+    height: 280px;
+}
+
+.jogoTatico p{
+    width: 500px;
+    margin-top: 0;
+}
+
+/*-- JOGOS RAINBOW --*/
+
+.jogosRainbow {
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+    width: 140px;
+    padding: 30px;
+}
+
+.jogosRainbow img {
+    height: 180px;
+    width: 140px;
+}
+
+
+/*-- FOOTER --*/
+
+.black-div{
+    background-color: black;
+    height: 160px;
+}
+
+.grey-div{
+    background-color: #232121;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#footer P {
+   color:white ;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.logoFooter {
+    width: 130px;
+    height: 70px;
+    margin-left: 25px;
+}
+
+.contentFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.redesSociais img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.direitosTxt{
+    font-size: 8px;
+}
+
+.mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
