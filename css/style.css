@@ -1,4 +1,19 @@
+/*
+Fontes disponiveis:
+-------------------
+font-family: 'Inter', sans-serif;
+font-family: 'Jockey One', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
 body{
+    background-image: url(../assets/imagens/r6Background\ 1.png);
+    min-height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: difference;
     margin: 0;
 }
 
@@ -7,7 +22,6 @@ figure{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5px;
     margin: 0;
   
 }
@@ -21,12 +35,15 @@ figcaption{
     text-align: center;
 }
 
-/*--Background--*/
+figcaption p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
 
-.background{
-    background-image: url(./assets/imagens/r6Background.jpg);
-    width: 100%;
-    z-index: -1;
+h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /*--NavBar--*/
@@ -48,6 +65,13 @@ figcaption{
     height: 40px;
     margin-left: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.buttonLogo{
+    all: unset;
+    cursor: pointer;
+    outline: revert;
 }
 
 .link{
@@ -73,6 +97,7 @@ figcaption{
 .link img {
     width: 70px;
     height: 70px;
+    cursor: pointer;
 }
 
 
@@ -89,13 +114,23 @@ figcaption{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 45px 190px;
+    margin: 45px 150px 45px 150px;
     font-size: 23px;
 }
 
 #container h1{
     font-size: 29px;
     margin-bottom: 0;
+}
+
+#container p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+#container b {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 /*--O INFOSIX--*/
@@ -105,11 +140,12 @@ figcaption{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .oInfoSix img{
-    width: 320px;
-    height: 200px;
+    width: 370px;
+    height: 230px;  
     margin-right: 80px;
 }
 
@@ -129,33 +165,30 @@ figcaption{
 /*--TOM CLANCY'S--*/
 
 .tomClancys{
-    margin-top:80px;
+    margin-top:100px;
 }
 
 .tomClancys h1{
     display: flex;
     text-align: left;
-    width: 810px;
+    width: 880px;
 }
 
 .tomClancys img {
-    width: 140px;
-    height: 170px;
-}
-
-.tomClancys figure {
-    background-color: grey;
+    width: 160px;
+    height: 220px;
 }
 
 .tomClancys figure span{
     font-size: 15px;
     padding: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 .tomClancys p {
     margin: 0;
-    margin-right: 30px;
-    width: 480px;
+    width: 570px;
 }
 
 .tomClancysConteudo{
@@ -163,36 +196,47 @@ figcaption{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 40px;
+    margin-right: 70px;
     width: 810px;
 }
 
 /*--O COMEÇO--*/
 
-.oComeco{
-    margin-top:70px;
-}
-
-.oComeco h1{
-    margin-bottom: 20px;
-}
-
-.oComecoConteudo {
+.containerComeco{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top:70px;
+}
+
+.oComeco{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.oComeco h2{
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .Img1998 {
     display: flex;
     flex-direction: row;
+    margin-right: 78px;
 }
 
 .oComecoTxt {
-    width: 500px;
+    width: 5    00px;
 }
 
 .book {
     height: 242px;
+    padding: 0px 20px;
 }
 
 /*-- JOGO TÁTICO --*/
@@ -216,17 +260,53 @@ figcaption{
 
 /*-- JOGOS RAINBOW --*/
 
+#conteudoJogos{
+    display: flex;
+    justify-content: center;
+}
+
 .jogosRainbow {
     display: flex;
     flex-direction: row;
-    height: 180px;
-    width: 140px;
-    padding: 30px;
+    justify-content: space-around;
+    width: 1210px;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.jogosRainbow p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 10px;
+    color: white;
+    
+    padding: 4px;
 }
 
 .jogosRainbow img {
     height: 180px;
-    width: 140px;
+    width: 140px;   
+    margin-bottom: 20px;
+}
+
+/*-- O SIEGE --*/
+
+.oSiege{
+    margin: 60px 0px;
+}
+
+.siege-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 70px;
+    height: 300px;
+}
+
+.siege-img img{
+    height: 249px;  
+    width: 390px;       
 }
 
 

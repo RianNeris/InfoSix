@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/imagens/i (1).png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <title>InfoSix | Cadastro</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <button onclick="trocarPagina()" class="buttonLogo" type="submit">
+                <img src="./assets/imagens/Logo-navbar.svg" alt="Logo do site InfoSix">
+            </button>  
+        </div>
+            <div class="link">
+                <a href="index.html">Home</a>
+                <a>|</a>
+                <a href="">Saiba mais</a>
+                <a>|</a>
+                <a href="cadastro.html"><u>Cadastre-se</u></a>
+                <img src="./assets/imagens/perfil-img-removebg-preview 1.svg" alt="imagem de perfil">
+            </div>
+    </div>
+    <div class="containerCadastro">
+        <div class="boxCadastro">
+            <div class="tituloCadastro">
+                <h1>CADASTRAR-SE</h1>
+            </div>
+            <span>Nome:</span>
+            <input id="input_nome" type="text" placeholder="Seu nome">
+            <span>Email:</span>
+            <input id="input_email" type="email" placeholder="example@provedor.com">
+            <span>Senha:</span>
+            <input id="input_senha" type="password" placeholder="*********">
+            <div class="botaoCadastrar">
+                <button>Cadastrar</button>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="black-div">
+            <img class="logoFooter" src="./assets/imagens/logoFooter.svg" alt="Logo infoSix">
+            <div class="contentFooter">
+                <div class="redesSociais">
+                    <img href="" src="./assets/imagens/icone-facebook.png" >
+                    <img href="" src="./assets/imagens/icone-instagram.png" >
+                    <img href="" src="./assets/imagens/icone-twitter.png" >
+                    <div class="direitosTxt">
+                        <p>Todos direitos são reservados</p>
+                        <p>© 2023 Rian Neris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grey-div">
+            <div class="mensagem">
+                <p>Projeto individual feito com ❤ por Rian Neris  | para fins acadêmicos</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function trocarPagina(){
+        window.location.href = "index.html"
+        
+    }
+</script>
