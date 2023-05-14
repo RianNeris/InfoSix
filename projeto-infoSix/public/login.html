@@ -6,42 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/imagens/i (1).png">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
-    <title>InfoSix | Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">  
+    
+    <title>InfoSix | Login</title>
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <button onclick="trocarPagina()" class="buttonLogo" type="submit">
-                <img src="./assets/imagens/Logo-navbar.svg" alt="Logo do site InfoSix">
-            </button>  
+            <a href="index.html"><img src="./assets/imagens/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
         </div>
             <div class="link">
                 <a href="index.html">Home</a>
                 <a>|</a>
                 <a href="">Saiba mais</a>
                 <a>|</a>
-                <a href="cadastro.html"><u>Cadastre-se</u></a>
-                <img src="./assets/imagens/perfil-img-removebg-preview 1.svg" alt="imagem de perfil">
+                <a href="cadastro.html">Cadastre-se</a>
+                <a href=""><img src="./assets/imagens/perfil-img-removebg-preview 1.svg" alt="imagem de perfil"></a>
             </div>
     </div>
-    <div class="containerCadastro">
-        <div class="boxCadastro">
-            <div class="tituloCadastro">
-                <h1>CADASTRAR-SE</h1>
+    <div class="containerLogin">
+        <div class="boxLogin">
+            <div class="tituloLogin">
+                <h1>LOGIN</h1>
             </div>
-            <span>Nome:</span>
-            <input id="input_nome" type="text" placeholder="Seu nome">
             <span>Email:</span>
             <input id="input_email" type="email" placeholder="example@provedor.com">
             <span>Senha:</span>
             <input id="input_senha" type="password" placeholder="*********">
-            <div class="botaoCadastrar">
-                <button>Cadastrar</button>
+            <div class="botaoLogar">
+                <button>Entrar</button>
             </div>
+                <a class="link-cadastro" href="cadastro.html">Não tem uma conta? Faça o cadastro.</a>
         </div>
     </div>
     <div id="footer">
@@ -67,10 +65,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    function trocarPagina(){
-        window.location.href = "index.html"
-        
-    }
-</script>

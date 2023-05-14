@@ -87,7 +87,7 @@ h1{
 .link a{
     text-decoration: none;
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 18px;
     padding: 10px;
@@ -218,7 +218,7 @@ h1{
 
 .oComeco h2{
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 28px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-style: normal;

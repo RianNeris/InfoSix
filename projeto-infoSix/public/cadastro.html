@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/imagens/i (1).png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
+    
+    <title>InfoSix | Cadastro</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="./assets/imagens/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
+        </div>
+            <div class="link">
+                <a href="index.html">Home</a>
+                <a>|</a>
+                <a href="">Saiba mais</a>
+                <a>|</a>
+                <a href="cadastro.html"><b>Cadastre-se</b></a>
+                <a href="login.html"><img src="./assets/imagens/perfil-img-removebg-preview 1.svg" alt="imagem de perfil"></a>
+            </div>
+    </div>
+    <div class="containerCadastro">
+        <div class="boxCadastro">
+            <div class="tituloCadastro">
+                <h1>CADASTRAR-SE</h1>
+            </div>
+            <span>Nome:</span>
+            <input id="input_nome" type="text" placeholder="Seu nome">
+            <span>Email:</span>
+            <input id="input_email" type="email" placeholder="example@provedor.com">
+            <span>Senha:</span>
+            <input id="input_senha" type="password" placeholder="*********">
+            <span>Confirmar senha:</span>
+            <input id="input_ConfSenha" type="password" placeholder="*********">
+            <div class="botaoCadastrar">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+                <a class="link-login" href="login.html">Já tem uma conta? Faça login.</a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="black-div">
+            <img class="logoFooter" src="./assets/imagens/logoFooter.svg" alt="Logo infoSix">
+            <div class="contentFooter">
+                <div class="redesSociais">
+                    <img href="" src="./assets/imagens/icone-facebook.png" >
+                    <img href="" src="./assets/imagens/icone-instagram.png" >
+                    <img href="" src="./assets/imagens/icone-twitter.png" >
+                    <div class="direitosTxt">
+                        <p>Todos direitos são reservados</p>
+                        <p>© 2023 Rian Neris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grey-div">
+            <div class="mensagem">
+                <p>Projeto individual feito com ❤ por Rian Neris  | para fins acadêmicos</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_nome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var confirmacaoSenhaVar = input_ConfSenha.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+          alert("Por favor preencha todos os campos!");
+
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert("Cadastrado com sucesso!!!");
+                alert("Realize seu login "+ nomeVar);
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "500")    
+            } 
+            else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>
+
