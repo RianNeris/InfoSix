@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background-image: url(../assets/imagens/r6Background.jpg);
+    background-image: url(../assets/imagens/bgLogin.jpg);
     min-height: 100%;
     background-size: contain;   
     background-position: center center;
@@ -34,24 +34,42 @@ span{
     font-size: 14px;   
 }
 
-.containerLogin{
+#containerBoxLogin{
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 800px;
+   padding: 50px;
    
 }
 
 .boxLogin{
     display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    border-radius: 6px;
-    height: 350px;
-    width: 420px;   
-    padding: 35px;
-    margin-bottom: 200px;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: 570px;
+    width: 1100px;   
+    margin-bottom: 100px;
 }
+
+.img-login-background img{
+    height: 570px;
+    width: 680px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.containerDadosLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 6px 6px 0px; 
+    padding: 35px;
+    height: 500px;
+    width: 460px;
+    top: 0;
+    right: 25%;
+ }
 
 .tituloLogin{
     display: flex;
@@ -63,7 +81,7 @@ span{
     background-color: #D9D9D9;
     border-style: none;
     height: 39px;
-    width: 415px;
+    width: 430px;
     margin-bottom: 30px;
     border-radius: 6px;
     padding-left: 15px;
@@ -75,8 +93,32 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
+
+.botaoLogar button{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    background-color: #403f3f;
+    color: #fffdfd;
+    margin-top: 15px;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+    position:relative;
+    top:0;
+    padding:4px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.botaoLogar:hover button {
+    top: -3px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.427);
+}
+
 
 .link-cadastro{
     display: flex;
@@ -87,20 +129,7 @@ span{
     font-size: 14px;
 }
 
-.botaoLogar button{
-    text-align: center;
-    font-size: medium;
-    margin-top: 15px;
-    background-color: #636363;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-style: bold;
-    color: #D9D9D9;
-    border-radius: 4px;
-    height: 40px;
-    width: 200px;
-    cursor: pointer;
-
+.link-cadastro a {
+    padding: 2px;
 }
 

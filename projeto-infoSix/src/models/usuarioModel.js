@@ -1,3 +1,21 @@
+/*
+Processo de retorno 
+*--------------------------------------------------------------------------------------*
+|    1. Model - Retorna a resolução da query do banco de dados.                        |
+|    2. Controller - Recebe o return do Model e verifica se deu tudo certo ou não.     |
+|    De acordo com o resultado ele defini o erro que vai ser retornado ou se vai ser   |
+|    retornado o valor que veio de model (Normalmente as tuplas que a query            |
+|    modificou/inseriu/selecionou).                                                    |
+|    3. Routes - Este só repassa a informação. É como se ela passasse direto por ele.  |
+|    Uma vez o res sendo usado no controller; a resposta (res) já é enviada através    |
+|    do router também.                                                                 |
+|    4. Fetch - A função fetch executa seu trecho "then()", onde a resposta (res)      |
+|    é recebida e tradada da forma que o usuário quiser.                               |
+*--------------------------------------------------------------------------------------*
+*/
+
+
+
 var database = require("../database/config")
 
 function listar() {

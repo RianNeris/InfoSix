@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/imagens/i (1).png">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="icon" href="assets/image/iconWeb.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
@@ -14,46 +14,57 @@
     <title>InfoSix | Cadastro</title>
 </head>
 <body>
-    <div class="navbar">
+    <div id="navbar">
         <div class="logo">
-            <a href="index.html"><img src="./assets/imagens/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
+                <a href="index.html"><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
         </div>
-            <div class="link">
-                <a href="index.html">Home</a>
+            <div id="link">  
+                <a class="link-nav" href="index.html">Home</a>
                 <a>|</a>
-                <a href="">Saiba mais</a>
+                <a class="link-nav" href="">A história</a>
                 <a>|</a>
-                <a href="cadastro.html"><b>Cadastre-se</b></a>
-                <a href="login.html"><img src="./assets/imagens/perfil-img-removebg-preview 1.svg" alt="imagem de perfil"></a>
+                <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+            </div>
+            <div id="linkLoginCadastro">
+                <a class="link-nav" href="login.html">Entrar</a>
+                <a>|</a>
+                <a class="link-nav" href="cadastro.html"><b>Cadastre-se</b></a>
             </div>
     </div>
-    <div class="containerCadastro">
+    <div id="containerBoxCadastro">
         <div class="boxCadastro">
-            <div class="tituloCadastro">
-                <h1>CADASTRAR-SE</h1>
+            <div class="img-cadastro-background">
+                <img src="assets/image/boxLoginCadastro.jpg" alt="">
             </div>
-            <span>Nome:</span>
-            <input id="input_nome" type="text" placeholder="Seu nome">
-            <span>Email:</span>
-            <input id="input_email" type="email" placeholder="example@provedor.com">
-            <span>Senha:</span>
-            <input id="input_senha" type="password" placeholder="*********">
-            <span>Confirmar senha:</span>
-            <input id="input_ConfSenha" type="password" placeholder="*********">
-            <div class="botaoCadastrar">
-                <button onclick="cadastrar()">Cadastrar</button>
+            <div class="containerDadosCadastro">
+                <div class="tituloCadastro">
+                    <h1>CADASTRAR-SE</h1>
+                </div>
+                <span>Nome:</span>
+                <input id="input_nome" type="text" placeholder="Seu nome">
+                <span>Email:</span>
+                <input id="input_email" type="email" placeholder="example@provedor.com">
+                <span>Senha:</span>
+                <input id="input_senha" type="password" placeholder="********" pattern="(?=^.{8,50}$).*$">
+                <span>Confirmar senha:</span>
+                <input id="input_ConfSenha" type="password" placeholder="********" minlength="8">
+                <div class="botaoCadastrar">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                </div>
+                <div class="link-login">
+                    <a>Já tem uma conta?<a href="login.html">Faça login.</a></a>
+                </div>
             </div>
-                <a class="link-login" href="login.html">Já tem uma conta? Faça login.</a>
         </div>
     </div>
     <div id="footer">
         <div class="black-div">
-            <img class="logoFooter" src="./assets/imagens/logoFooter.svg" alt="Logo infoSix">
+            <a href="cadastro.html"><img class="logoFooter" src="assets/image/logoFooter.svg" alt="Logo infoSix"></a>
             <div class="contentFooter">
                 <div class="redesSociais">
-                    <img href="" src="./assets/imagens/icone-facebook.png" >
-                    <img href="" src="./assets/imagens/icone-instagram.png" >
-                    <img href="" src="./assets/imagens/icone-twitter.png" >
+                    <img href="" src="assets/image/icone-facebook.png" >
+                    <img href="" src="assets/image/icone-instagram.png" >
+                    <img href="" src="assets/image/icone-twitter.png" >
                     <div class="direitosTxt">
                         <p>Todos direitos são reservados</p>
                         <p>© 2023 Rian Neris</p>
@@ -83,6 +94,16 @@
 
             return false;
         }
+
+        if(senhaVar.length < 8){
+            alert("As senhas precisam ter no mínimo 8 caracteres!");
+        }
+
+        if(senhaVar != confirmacaoSenhaVar){
+            alert("As senhas precisam ser iguais!");
+
+            return false;
+        } else{ 
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -117,6 +138,7 @@
         });
 
         return false;
+     }
     }
 
 </script>

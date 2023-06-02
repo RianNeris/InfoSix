@@ -11,13 +11,12 @@ html{
 }
 
 body{
-    background-image: url(../assets/imagens/r6Background.jpg);
+    background-color: gray;
     min-height: 100%;
-    background-size: contain;   
+    background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-blend-mode: luminosity;
     margin: 0;
 }
 
@@ -34,26 +33,44 @@ span{
     font-size: 14px;   
 }
 
-.containerCadastro{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 800px;
-   
+#containerBoxCadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
 }
 
 .boxCadastro{
     display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    border-radius: 6px;
-    height: 450px;
-    width: 420px;
-    padding: 35px;
-    margin-bottom: 200px;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: 570px;
+    width: 1100px;
+    margin-bottom: 100px;
 }
 
-.tituloCadastro{
+.img-cadastro-background img{
+    height: 570px;
+    width: 680px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.containerDadosCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 6px 6px 0px; 
+    padding: 35px;
+    height: 500px;
+    width: 460px;
+    top: 0;
+    right: 25%;
+ }
+
+.tituloCadastro {
     display: flex;
     justify-content: center;
 }
@@ -63,7 +80,7 @@ span{
     background-color: #D9D9D9;
     border-style: none;
     height: 39px;
-    width: 415px;
+    width: 430px;
     margin-bottom: 10px;
     border-radius: 6px;
     padding-left: 15px;
@@ -80,25 +97,37 @@ span{
 .botaoCadastrar button{
     text-align: center;
     font-size: medium;
-    margin-top: 30px;
-    background-color: #636363;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-style: bold;
-    color: #D9D9D9;
+    background-color: #403f3f;
+    color: #fffdfd;
+    margin-top: 30px;
     border-radius: 4px;
     height: 40px;
     width: 200px;
+    position:relative;
+    top:0;
+    padding:4px;
+    transition: all .2s ease-in-out;
     cursor: pointer;
+}
 
+.botaoCadastrar:hover button{
+    top: -3px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.427);
 }
 
 .link-login{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
+}
+
+.link-login a{
+    padding: 2px;
 }

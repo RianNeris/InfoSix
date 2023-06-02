@@ -7,7 +7,7 @@ font-family: 'Lato', sans-serif;
 */
 
 body{
-    background-image: url(../assets/imagens/r6Background\ 1.png);
+    background-image: url(../assets/imagens/bgHome.png);
     min-height: 100%;
     background-size: cover;
     background-position: center center;
@@ -48,7 +48,7 @@ h1{
 
 /*--NavBar--*/
 
-.navbar{
+#navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,6 +56,16 @@ h1{
     background-color: black;
     width: auto;
     height: 70px;
+}
+
+#navbar a, #link-login-cadastro-access {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    padding: 11px;
+    letter-spacing: 6%;
 }
 
 .logo img{
@@ -68,38 +78,40 @@ h1{
     cursor: pointer;
 }
 
-.buttonLogo{
-    all: unset;
-    cursor: pointer;
-    outline: revert;
-}
-
-.link{
+#link{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    
-    
 }
 
-.link a{
-    text-decoration: none;
-    color: white;
+/* #link-login-cadastro-access {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 18px;
-    padding: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 11px;
     letter-spacing: 6%;
+} */
+
+#linkLoginCadastro, #link-login-cadastro-access{
+    margin-right: 20px;
 }
 
-.link img {
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
+.link-nav{
+    position:relative;
+    top:0;
+    padding:4px;
+    transition: all .2s ease-in-out;
 }
 
+.link-nav:hover {
+    top:-3px;
+    border-radius: 4px;
+    box-shadow:0px 1px 1px 1px #fff9f9
+}
 
 /*--Capa Operadores--*/
 
@@ -324,7 +336,7 @@ h1{
 #footer{
     display: flex;
     flex-direction: column;
-    
+    margin: 0px;
 }
 
 
