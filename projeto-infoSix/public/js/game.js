@@ -2,7 +2,11 @@ const grid = document.querySelector('.grid');
 
 const spanPlayer = document.querySelector('.player');
 
-const timer = document.querySelector('.timer');
+const seconds = document.querySelector('.seconds');
+
+const minutes = document.querySelector('.minutes');
+
+const pontos = document.querySelector('.pontos');
 
 const agentes = [
 'ash',
@@ -35,18 +39,20 @@ const checarFimDeJogo = () => {
     if(cartasDesabilitadas.length == 20){
         setTimeout(() => {
             clearInterval(this.loop);
-            alert(`Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi: ${timer.innerHTML}`)
+            alert(`Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi: ${minutes.innerHTML}:${seconds.innerHTML} e seus pontos foram: ${pontos.innerHTML}`)
             //window.location = "/desempenho.html";
         }, 200)
     }
 }
 
+
 const checarCartas = () => {
     const firstAgent = firstCard.getAttribute('data-agente');
     const secondAgent = secondCard.getAttribute('data-agente');
+    const pontuacao = Number(pontos.innerHTML);
 
     if(firstAgent == secondAgent){
-
+        pontos.innerHTML = pontuacao + 10;
         firstCard.firstChild.classList.add('disable-card');
         secondCard.firstChild.classList.add('disable-card');
 
@@ -138,17 +144,14 @@ const carregarJogo = () => {
 
 const iniciarTempo = () => {
     this.loop = setInterval(() => {
-        const tempoAtual = Number(timer.innerHTML);
-        const min = 0;
+        const tempoAtualSegundos = Number(seconds.innerHTML);
+        const tempoAtualMinutos = Number(minutes.innerHTML);
 
-        timer.innerHTML = `${tempoAtual + 1}`;
+        seconds.innerHTML = `${tempoAtualSegundos + 1}`;
 
-               
-        if(tempoAtual == 60){
-            min++
-            tempoAtual = 0;
-
-            timer.innerHTML = `${min} : ${tempoAtual}`
+        if(tempoAtualSegundos == 60){
+            minutes.innerHTML = `${tempoAtualMinutos + 1}`
+            seconds.innerHTML = 0;
 
         }
 
