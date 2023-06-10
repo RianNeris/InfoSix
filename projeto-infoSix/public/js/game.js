@@ -1,12 +1,10 @@
 const grid = document.querySelector('.grid');
-
 const spanPlayer = document.querySelector('.player');
-
 const seconds = document.querySelector('.seconds');
-
 const minutes = document.querySelector('.minutes');
-
 const pontos = document.querySelector('.pontos');
+const resultado = document.querySelector('.mensagem_resultado');
+const divResultado = document.querySelector('.boxResultado');
 
 const agentes = [
 'ash',
@@ -22,16 +20,17 @@ const agentes = [
 ];
 
 
-
 const criarElemento = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
     return element;
 }
 
+
 // recebe as duas cartas que estão viradas
 let firstCard = '';
 let secondCard = '';
+var time = '';
 
 const checarFimDeJogo = () => {
     const cartasDesabilitadas = document.querySelectorAll('.disable-card');
@@ -39,7 +38,10 @@ const checarFimDeJogo = () => {
     if(cartasDesabilitadas.length == 20){
         setTimeout(() => {
             clearInterval(this.loop);
-            alert(`Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi: ${minutes.innerHTML}:${seconds.innerHTML} e seus pontos foram: ${pontos.innerHTML}`)
+            time = `${minutes.innerHTML}:${seconds.innerHTML}`;
+            resultado.innerHTML = `Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi: ${time} e seus pontos foram: ${pontos.innerHTML}`
+            divResultado.style.display = "block"
+            cadastrarPartida();
             //window.location = "/desempenho.html";
         }, 200)
     }
@@ -159,11 +161,43 @@ const iniciarTempo = () => {
 
 }
 
+function cadastrarPartida(){
+    var idUsuario = sessionStorage.ID_USUARIO;
+    
+    fetch(`/partida/cadastrarPartida/${idUsuario}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/pontuacao.js
+            pontuacaoServer: pontos.innerHTML,
+            tempoServer: time
+        })
+            }).then(function (resposta) {
+                console.log("Estou dentro do THEN do CadastrarPartida!");
+
+                if (resposta.ok) {
+                    console.log(`Dados da partida foram enviados!`);
+                } else {
+                    throw ("Houve um erro ao tentar enviar os dados da patida!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+}
+
+function sumirResultado(){
+    divResultado.style.display = "none"
+}
+
 window.onload = () => {
     //para capturar o nome do usuario no localStorage e exibir na span
-    spanPlayer.innerHTML = sessionStorage.NOME_USUARIO;    
+    spanPlayer.innerHTML = sessionStorage.NOME_USUARIO; 
     iniciarTempo();
     carregarJogo();
+    sumirResultado(); 
 }
 
 

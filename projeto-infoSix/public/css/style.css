@@ -58,6 +58,10 @@ h1{
     height: 70px;
 }
 
+.separator-bar{
+    cursor: pointer;
+}
+
 #navbar a, #link-login-cadastro-access {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -336,9 +340,11 @@ h1{
 #footer{
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    bottom: 0;
+    left:0;
+    margin: auto;
+    width: 100%;
 }
-
 
 #footer P {
    color:white ;
