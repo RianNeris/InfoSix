@@ -1,11 +1,26 @@
+/*
+Fontes disponiveis:
+-------------------
+font-family: 'Inter', sans-serif;
+font-family: 'Jockey One', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+
+@font-face {
+    font-family: 'font-rainbow';
+    src: url(../assets/font/Rainbow.ttf) format('truetype');
+}
+
 #backgroundVideo {
     background-size: cover;
+    padding: 0;
 }
 
 .bg_video {
 	position: relative;
-	width: 100%; 
-	height: 100%;
+	width: 100%;
+	max-height: 100%;
 	background-size: cover;
     margin: 0%;
     padding: 0%;
@@ -19,10 +34,13 @@
     left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 60px;
 }
 
 #logo-infosix {
+    height: 530px;
+    width: 1000px;
     margin: 0%;
     padding: 0%;
     position: relative;
@@ -30,23 +48,146 @@
     left: 0;
 }
 
+/*--A Gameplay (Video)--*/
+
+.gameplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/image/Loading-Bank_V2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 520px;
+    padding: 37px 40px 70px 40px;
+}
+
+.boxVideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 32px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 6px;
+    /* padding: 20px; */
+    height: 388px;
+    width: 700px;
+}
+
+.gameplay h1{
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0.596);
+    color: white;
+    font-size: 31px;
+    margin-bottom: 23px;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.boxVideo iframe {
+    size: cover;    
+    border-radius: 4px;
+}
+
+/*--O INFOSIX--*/
+
+.oInfoSix{
+    background-image: url("../assets/image/bgR6S.jpg");
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 70px;
+}
+
+.oInfoSix_Txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 32px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 6px;
+    padding: 50px;
+    color: white;
+    height: 300px;
+    width: 600px;
+    z-index: 2;
+}
+
+.oInfoSix_Txt p{
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    margin-top: 22px;
+    margin-bottom: 110px;
+    width: 510px;
+    font-size: 19px;
+}
+
+.oInfoSix_Txt h1{
+    display: flex;
+    text-align: left;
+    font-style: italic;
+    font-size: 40px;
+    margin: 0;
+}
+
+.img-fenrir {
+    height: 609px;
+    width: 780px;
+    display: flex;
+    position: absolute;
+    left: 42%;
+    top: 118%;
+    z-index: 1;
+}
+
 /*Titulo News - Slider*/
+
+.news{
+    padding: 18px 80px 30px 80px;
+
+    /* background-image: url("../assets/image/SI2021_Background_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-image: url("../assets/image/r6s-operator-fenrir.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    background-position: right;
+    z-index: -1; */
+}
 
 .tituloNews{
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 6px;
+    border-radius: 5px;
 }
 
 .logoNews{
     width: 50px;
+    padding: 0px 8px 0px 8px;
 }
 
 .h1News{
-    font-family:'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 50px;
+    text-align: center; 
+    margin-top: 48px;   
+    margin: 0;
 }
 
 /*Slider de Notícias*/
@@ -153,9 +294,4 @@
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: #2a97fa;
-}
-
-
-#footer{
-    margin-top: 50px;
 }

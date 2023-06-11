@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background-color: gray;
+    background-image: url(../assets/imagens/bgLogin.jpg);
     min-height: 100%;
     background-size: contain;
     background-position: center center;

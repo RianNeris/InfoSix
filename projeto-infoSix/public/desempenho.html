@@ -35,11 +35,13 @@
             </div>
             <div id="link-login-cadastro-access">Olá <span id="nome_usuario"></span> !</div>
     </div>
-    <h3 class="tituloGrafico">
-        <span id="titulo">Pontuação por partidas</span>
-    </h3>
-    <div class="graph">
-        <canvas id="myChartCanvas"></canvas>
+    <div class="containerGrafico">
+        <div class="graph">
+            <h3 class="tituloGrafico">
+                <span id="titulo">Pontos por partida:</span>
+            </h3>
+            <canvas id="myChartCanvas"></canvas>
+        </div>
     </div>
     <div id="footer">
         <div class="black-div">
@@ -132,7 +134,7 @@ function receberPartidas() {
         // Criando estrutura para plotar gráfico - config
         const config = {
             type: 'bar',
-            data: dados,
+            data: dados,    
         };
 
         // Adicionando gráfico criado em div na tela

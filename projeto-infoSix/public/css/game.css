@@ -1,3 +1,11 @@
+/*
+Fontes disponiveis:
+-------------------
+font-family: 'Inter', sans-serif;
+font-family: 'Jockey One', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
 main {
     display: flex;
     flex-direction: column;

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">  
-    
+    <script type="text/javascript" src="js/funcoes.js"></script>
     <title>InfoSix | Login</title>
 </head>
 <body>
@@ -18,18 +18,32 @@
         <div class="logo">
                 <a href="index.html"><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
         </div>
-            <div id="link">  
-                <a class="link-nav" href="index.html">Home</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="">A história</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+        <div id="link">  
+            <a class="link-nav" href="index.html">Home</a>
+            <a class="separator-bar">|</a>
+            <a class="link-nav" href="aHistoria.html">A história</a>
+            <a class="separator-bar">|</a>
+            <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+            <a class="separator-bar">|</a>
+            <a class="link-nav" href="game.html">Game</a>
+        </div>
+        <div id="linkLoginCadastro">
+            <a class="link-nav" href="login.html"><b>Entrar</b></a>
+            <a class="separator-bar">|</a>
+            <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+        </div>
+
+        <div onclick="toggleMenu()" id="link-login-cadastro-access">Olá <span id="nome_usuario"></span> !</div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <a onclick="limparSessao()" class="sub-menu-link">
+                        <img src="./assets/image/logout.png">
+                        <h2>Logout</h2>
+                    </a>
+                </div>
             </div>
-            <div id="linkLoginCadastro">
-                <a class="link-nav" href="login.html"><b>Entrar</b></a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="cadastro.html">Cadastre-se</a>
-            </div>
+        </div>
     </div>
     <div id="containerBoxLogin">
         <div class="boxLogin">
@@ -78,6 +92,14 @@
 </html>
 
 <script>
+    validarSessao()
+
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
     function entrar() {
         //aguardar();
 
@@ -144,7 +166,6 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 

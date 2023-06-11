@@ -12,8 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/funcoes.js"></script>
     <title>InfoSix</title>
-
-</head>
 </head>
 <body>
     <div id="navbar">
@@ -21,9 +19,9 @@
                 <a href="index.html"><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
         </div>
             <div id="link">  
-                <a class="link-nav" href="index.html">Home</a>
+                <a class="link-nav" href="index.html"><b>Home</b></a>
                 <a class="separator-bar">|</a>
-                <a class="link-nav" href="aHistoria.html"><b>A história</b></a>
+                <a class="link-nav" href="aHistoria.html">A história</a>
                 <a class="separator-bar">|</a>
                 <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
                 <a class="separator-bar">|</a>
@@ -34,7 +32,18 @@
                 <a class="separator-bar">|</a>
                 <a class="link-nav" href="cadastro.html">Cadastre-se</a>
             </div>
-            <div id="link-login-cadastro-access">Olá <span id="nome_usuario"></span> !</div>
+
+            <div onclick="toggleMenu()" id="link-login-cadastro-access">Olá <span id="nome_usuario"></span> !</div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <a onclick="limparSessao()" class="sub-menu-link">
+                            <img src="./assets/image/logout.png">
+                            <h2>Logout</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
     </div>
     <div id="backgroundVideo">
         <video preload="preload" loop="loop" autoplay="autoplay" muted class="bg_video">    
@@ -44,47 +53,64 @@
             <img id="logo-infosix" src="assets/image/logoHome.png">
         </div>
     </div>
-    <div class="tituloNews">
-        <img class="logoNews" src="./assets/image/iconWeb.png">
-        <h1 class="h1News">NEWS</h1>
-    </div>
-    <div class="slider">
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-
-            <div class="slide first">
-                <img src="./assets/image/R6_DesignersNotes_Y8S2.png">
-                div.
-            </div>
-            <div class="slide ">
-                <img src="./assets/image/Y7S4.R6Fix.Update.png">
-            </div>
-            <div class="slide ">
-                <img src="./assets/image/Anti-cheat_header.png">
-            </div>
-            <div class="slide ">
-                <img src="./assets/image/Y8S1.2_PatchNotes.png">
-            </div>
-
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
+    <div class="oInfoSix">
+        <div class="oInfoSix_Txt">
+            <h1>O QUE É O INFO SIX ?</h1>
+            <p>O InfoSix é um site informativo feito pelo desenvolvedor e fã do jogo Rian Neris e é dedicado a série de jogos Rainbow Six, oferecendo uma ampla gama de recursos, dicas e guias para ajudar os jogadores a se tornarem mais proficientes e bem informados sobre o jogo. É um local essencial para os jogadores que desejam estar por dentro das últimas notícias, estratégias e atualizações relacionadas ao Rainbow Six Siege.</p>
         </div>
-
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+        <img class="img-fenrir" src="./assets/image/r6s-operator-fenrir.jpg" >
+    </div>
+    
+    <div class="gameplay">
+        <h1>TRAILER DO JOGO</h1>
+        <div class="boxVideo">
+            <iframe width="640" height="315" src="https://www.youtube-nocookie.com/embed/YlVf0XCybmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
+    
+    <div class="news">
+        <div class="tituloNews">
+            <img class="logoNews" src="./assets/image/iconWeb.png">
+            <h1 class="h1News">NEWS</h1>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
 
+                <div class="slide first">
+                    <a target="_blank" href="https://www.ubisoft.com/pt-br/game/rainbow-six/siege/news-updates/42o6BhsFgmPla9wmiJ5GnJ/notas-do-designer-do-patch-y8s2"><img src="./assets/image/R6_DesignersNotes_Y8S2.png"></a>
+                </div>
+                <div class="slide ">
+                    <a target="_blank" href="https://www.ubisoft.com/pt-br/game/rainbow-six/siege/news-updates/2sjhqfhPtIXahpoC0H6F5y/atualizao-de-recompensas-do-r6fix"><img src="./assets/image/Y7S4.R6Fix.Update.png"></a>
+                </div>
+                <div class="slide ">
+                    <a target="_blank" href="https://www.ubisoft.com/pt-br/game/rainbow-six/siege/news-updates/5q8GzILAUgryR22kCQRJVA/atualizao-de-status-antitrapaa-maio-de-2023"><img src="./assets/image/Anti-cheat_header.png"></a>
+                </div>
+                <div class="slide ">
+                    <a target="_blank" href="https://www.ubisoft.com/pt-br/game/rainbow-six/siege/news-updates/HTkVw1mAg7DuA2ZKWCKe0/notas-da-atualizao-y8s12"><img src="./assets/image/Y8S1.2_PatchNotes.png"></a>
+                </div>
+                
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+            
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    
+    
     <div id="footer">
         <div class="black-div">
             <a href="index.html"><img class="logoFooter" src="assets/image/logoFooter.svg" alt="Logo infoSix"></a>
@@ -108,9 +134,15 @@
     </div>
 </body>
 </html>
-
 <script>
     validarSessao()
+
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
 
     let count = 1;
     document.getElementById("radio1").checked = true

@@ -90,18 +90,12 @@ h1{
     align-items: center;
 }
 
-/* #link-login-cadastro-access {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-    padding: 11px;
-    letter-spacing: 6%;
-} */
-
 #linkLoginCadastro, #link-login-cadastro-access{
     margin-right: 20px;
+}
+
+#link-login-cadastro-access{
+    cursor: pointer;
 }
 
 .link-nav{
@@ -115,6 +109,59 @@ h1{
     top:-3px;
     border-radius: 4px;
     box-shadow:0px 1px 1px 1px #fff9f9
+}
+
+/*--Sub-menu--*/
+
+.sub-menu-wrap{
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 160px;
+    border-radius: 6px;
+    max-height: 0px;
+    overflow: hidden;
+    z-index: 1;
+    transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu{
+    max-height: 63px;
+}
+
+.sub-menu{
+    background: #000000;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info h2{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 6%;
+    margin: 0;
+}
+
+.user-info img{
+    height: 25px;
+    width: 25px;
+    padding: 8px;
+}
+
+.sub-menu-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px;
 }
 
 /*--Capa Operadores--*/
@@ -131,7 +178,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     margin: 45px 150px 45px 150px;
-    font-size: 23px;
+    font-size: 18px;    
 }
 
 #container h1{
@@ -147,35 +194,6 @@ h1{
 #container b {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-}
-
-/*--O INFOSIX--*/
-
-.oInfoSix{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.oInfoSix img{
-    width: 370px;
-    height: 230px;  
-    margin-right: 80px;
-}
-
-.oInfoSix_Txt{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    width: 500px;
-}
-
-.oInfoSix_Txt h1{
-    display: flex;
-    text-align: left;
 }
 
 /*--TOM CLANCY'S--*/
