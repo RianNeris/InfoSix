@@ -39,7 +39,7 @@ const checarFimDeJogo = () => {
         setTimeout(() => {
             clearInterval(this.loop);
             time = `${minutes.innerHTML}:${seconds.innerHTML}`;
-            resultado.innerHTML = `Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi: ${time} e seus pontos foram: ${pontos.innerHTML}`
+            resultado.innerHTML = `Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi de: ${time} e suas pontuação foi de: ${pontos.innerHTML} pontos.`
             divResultado.style.display = "block"
             cadastrarPartida();
             //window.location = "/desempenho.html";
@@ -145,6 +145,7 @@ const carregarJogo = () => {
 }
 
 const iniciarTempo = () => {
+    let secondsPassed = 0;
     this.loop = setInterval(() => {
         const tempoAtualSegundos = Number(seconds.innerHTML);
         const tempoAtualMinutos = Number(minutes.innerHTML);
@@ -154,7 +155,15 @@ const iniciarTempo = () => {
         if(tempoAtualSegundos == 60){
             minutes.innerHTML = `${tempoAtualMinutos + 1}`
             seconds.innerHTML = 0;
+        }
 
+        secondsPassed++;
+
+        if (secondsPassed % 20 === 0) {
+            const pontuacao = Number(pontos.innerHTML);
+            if (pontuacao >= 10) {
+                pontos.innerHTML = pontuacao - 5;
+            }
         }
 
     }, 1000);
@@ -198,6 +207,15 @@ window.onload = () => {
     iniciarTempo();
     carregarJogo();
     sumirResultado(); 
+}
+
+function vencerAutomaticamente() {
+    const cartas = document.querySelectorAll('.card');
+    cartas.forEach((carta) => {
+        carta.firstChild.classList.add('disable-card');
+    });
+
+    checarFimDeJogo();
 }
 
 

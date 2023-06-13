@@ -1,192 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/image/iconWeb.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/desempenho.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/image/iconWeb.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/desempenho.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="js/funcoes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>InfoSix | Desempenho</title>
-</head>
-<body onload="receberPartidas()">
+  </head>
+  <body onload="receberPartidas()">
     <div id="navbar">
-        <div class="logo">
-                <a href="index.html"><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"
+        /></a>
+      </div>
+      <div id="link">
+        <a class="link-nav" href="index.html">Home</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="historia.html"><b>História</b></a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="game.html">Game</a>
+      </div>
+      <div id="linkLoginCadastro">
+        <a class="link-nav" href="login.html">Entrar</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div onclick="toggleMenu()" id="link-login-cadastro-access">
+        Olá <span id="nome_usuario"></span> !
+      </div>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <a onclick="limparSessao()" class="sub-menu-link">
+              <img src="./assets/image/logout.png" />
+              <h2>Logout</h2>
+            </a>
+          </div>
         </div>
-            <div id="link">  
-                <a class="link-nav" href="index.html">Home</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="aHistoria.html"><b>A história</b></a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="game.html">Game</a>
-            </div>
-            <div id="linkLoginCadastro">
-                <a class="link-nav" href="login.html">Entrar</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="cadastro.html">Cadastre-se</a>
-            </div>
-            <div id="link-login-cadastro-access">Olá <span id="nome_usuario"></span> !</div>
+      </div>
     </div>
     <div class="containerGrafico">
-        <div class="graph">
-            <h3 class="tituloGrafico">
-                <span id="titulo">Pontos por partida:</span>
-            </h3>
-            <canvas id="myChartCanvas"></canvas>
-        </div>
+      <div class="cardPlayer">
+        <h3><b>status do jogador:</b></h3>
+        <b>Player: </b><span id="nome_player"></span>
+        <p><b>Recorde: </b><span id="recorde_player"></span></p>
+        <p><b>Partidas Jogadas: </b><span id="qtdPartidas"></span></p>
+      </div>
+      <div class="graph">
+        <h3 class="tituloGrafico">
+          <span id="titulo">PONTOS POR PARTIDA:</span>
+        </h3>
+        <canvas id="myChartCanvas"></canvas>
+      </div>
     </div>
     <div id="footer">
-        <div class="black-div">
-            <a href="index.html"><img class="logoFooter" src="assets/image/logoFooter.svg" alt="Logo infoSix"></a>
-            <div class="contentFooter">
-                <div class="redesSociais">
-                    <img href="" src="assets/image/icone-facebook.png" >
-                    <img href="" src="assets/image/icone-instagram.png" >
-                    <img href="" src="assets/image/icone-twitter.png" >
-                    <div class="direitosTxt">
-                        <p>Todos direitos são reservados</p>
-                        <p>© 2023 Rian Neris</p>
-                    </div>
-                </div>
+      <div class="black-div">
+        <a href="index.html"
+          ><img
+            class="logoFooter"
+            src="assets/image/logoFooter.svg"
+            alt="Logo infoSix"
+        /></a>
+        <div class="contentFooter">
+          <div class="redesSociais">
+            <img href="" src="assets/image/icone-facebook.png" />
+            <img href="" src="assets/image/icone-instagram.png" />
+            <img href="" src="assets/image/icone-twitter.png" />
+            <div class="direitosTxt">
+              <p>Todos direitos são reservados</p>
+              <p>© 2023 Rian Neris</p>
             </div>
+          </div>
         </div>
-        <div class="grey-div">
-            <div class="mensagem">
-                <p>Projeto individual feito com ❤ por Rian Neris | para fins acadêmicos</p>
-            </div>
+      </div>
+      <div class="grey-div">
+        <div class="mensagem">
+          <p>
+            Projeto individual feito com ❤ por Rian Neris | para fins acadêmicos
+          </p>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 <script>
-    validarSessao()
 
+  nome_player.innerHTML = sessionStorage.NOME_USUARIO;
 
-function receberPartidas() {
+  validarSessao();
+  receberMaiorPontuacao();
+  receberQtdPartidas();
+
+  let subMenu = document.getElementById("subMenu");
+
+  function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+  function receberQtdPartidas() {
     var idUsuario = sessionStorage.ID_USUARIO;
 
-    fetch(`/partida/receberPartidas/${idUsuario}`).then(function (resposta) {
-    if (resposta.ok) {
-        resposta.json().then(function (resposta) {
-        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-        plotarGrafico(resposta);
-        });
-    } else {
-        console.error('Nenhum dado encontrado ou erro na API');
-    }
-    })
-    .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    });
-}
+    fetch(`/partida/receberQtdPartidas/${idUsuario}`)
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (resposta) {
+            console.log(
+              `quantidade de partidas jogadas: ${JSON.stringify(resposta)}`
+            );
+            console.log(resposta);
+            qtdPartidas.innerHTML = resposta[0].qtdPartidas;
+          });
+        } else {
+          console.error("Nenhum dado encontrado ou erro na API");
+        }
+      })
+      .catch(function (error) {
+        console.error(
+          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+        );
+      });
+  }
 
-    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta) {
+  function receberMaiorPontuacao() {
+    var idUsuario = sessionStorage.ID_USUARIO;
 
-    console.log('iniciando plotagem do gráfico...');
+    fetch(`/partida/receberMaiorPontuacao/${idUsuario}`)
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (resposta) {
+            console.log(
+              `Pontuação recorde recebida: ${JSON.stringify(resposta)}`
+            );
+            recorde_player.innerHTML = resposta[0].recorde;
+          });
+        } else {
+          console.error("Nenhum dado encontrado ou erro na API");
+        }
+      })
+      .catch(function (error) {
+        console.error(
+          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+        );
+      });
+  }
+
+  function receberPartidas() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch(`/partida/receberPartidas/${idUsuario}`)
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (resposta) {
+            console.log(
+              `Dados das partidas recebidos: ${JSON.stringify(resposta)}`
+            );
+            plotarGrafico(resposta);
+          });
+        } else {
+          console.error("Nenhum dado encontrado ou erro na API");
+        }
+      })
+      .catch(function (error) {
+        console.error(
+          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+        );
+      });
+  }
+
+  // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+  // Configura o gráfico (cores, tipo, etc), materializa-o na página e,
+  // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+  function plotarGrafico(resposta) {
+    console.log("iniciando plotagem do gráfico...");
 
     // Criando estrutura para plotar gráfico - labels
-    let labels = [];
+    var labels = [];
 
     // Criando estrutura para plotar gráfico - dados
-    let dados = {
-        labels: labels,
-        datasets: [{
-            label: 'Partidas',
-            data: [],
-            backgroundColor: ["rgba(22, 49, 112, 0.5)"],
-            borderColor: "#163170",
-            borderWidth: 1,
-            fill: true,
-            tension: 0.1
-        }]
+    var dados = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Partidas",
+          data: [],
+          backgroundColor: ["rgba(22, 49, 112, 0.5)"],
+          borderColor: "#163170",
+          borderWidth: 1,
+          fill: true,
+          tension: 0.1,
+        },
+      ],
     };
 
-    console.log('----------------------------------------------')
-    console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-    console.log(resposta)
+    var options = {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 1,
+          },
+        },
+      },
+    };
+
+    console.log("----------------------------------------------");
+    console.log(
+      'Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":'
+    );
+    console.log(resposta);
 
     // Inserindo valores recebidos em estrutura para plotar o gráfico
     for (i = 0; i < resposta.length; i++) {
-        var registro = resposta[i];
-        labels.push(`Partida ${registro.idPartida}`);
-        dados.datasets[0].data.push(registro.pontuacao);
+      var registro = resposta[i];
+      labels.push(`Partida ${registro.idPartida}`);
+      dados.datasets[0].data.push(registro.pontuacao);
     }
 
-        console.log('----------------------------------------------')
-        console.log('O gráfico será plotado com os respectivos valores:')
-        console.log('Labels:')
-        console.log(labels)
-        console.log('Dados:')
-        console.log(dados.datasets)
-        console.log('----------------------------------------------')
+    console.log("----------------------------------------------");
+    console.log("O gráfico será plotado com os respectivos valores:");
+    console.log("Labels:");
+    console.log(labels);
+    console.log("Dados:");
+    console.log(dados.datasets);
+    console.log("----------------------------------------------");
 
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: dados,    
-        };
+    // Criando estrutura para plotar gráfico - config
+    const config = {
+      type: "bar",
+      data: dados,
+      options: options,
+    };
 
-        // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById(`myChartCanvas`),
-            config
-        );
-
-        atualizarGraficoLotes(dados, myChart)
-    }
-
-    function atualizarGraficoPartidas(dados, myChart) {
-
-    var idUsuario = sessionStorage.ID_USUARIO
-
-    fetch(`/partida/atualizarPartidas/${idUsuario}`, {  
-    }).then(function (resposta) {
-
-    if (resposta.ok) {
-        resposta.json().then(function (resposta) {
-        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-        console.log(`Dados atuais do gráfico:`);
-
-        for (var posicao = 0; posicao < resposta.length; posicao++) {
-
-            console.log(`${resposta[posicao].pontuacao}`);
-
-            if (dados.labels.length < resposta.length) {
-            dados.labels.push(`Partida ${resposta.length}`); // incluir um novo momento
-            }
-
-            dados.datasets[0].data[posicao] = resposta[posicao].pontuacao; // incluir uma nova medida de umidade
-
-            myChart.update();
-
-        }
-        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-        // proximaAtualizacao = setTimeout(() => atualizarGraficoLotes(dados, myChart), 2000);
-
-        });
-    } else {
-
-        resposta.text().then(texto => {
-        console.error(texto);
-        });
-    }
-
-    }).catch(function (erro) {
-    console.log(erro);
-    })
-
-    return false;
-    }
-
+    // Adicionando gráfico criado em div na tela
+    let myChart = new Chart(document.getElementById(`myChartCanvas`), config);
+  }
 </script>

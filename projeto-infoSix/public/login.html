@@ -21,7 +21,7 @@
         <div id="link">  
             <a class="link-nav" href="index.html">Home</a>
             <a class="separator-bar">|</a>
-            <a class="link-nav" href="aHistoria.html">A história</a>
+            <a class="link-nav" href="historia.html">História</a>
             <a class="separator-bar">|</a>
             <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
             <a class="separator-bar">|</a>
@@ -107,9 +107,6 @@
         var senhaVar = input_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            //cardErro.style.display = "block"
-            //mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            //finalizarAguardar();
             alert("Preencha todos os campos !!!");
             return false;
         }
@@ -160,8 +157,11 @@
                     }, 1000); // apenas para exibir o loading
                 });
             } else {
-
-
+                if(emailVar != resposta[0].email){
+                    alert("Este email não foi cadastrado");
+                } else if(senhaVar != resposta[0].senha){
+                    alert("Senha Incorreta!");
+                }
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
@@ -175,4 +175,6 @@
 
         return false;
     }
+
+    
 </script>

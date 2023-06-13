@@ -16,4 +16,12 @@ router.get("/atualizarPartidas/:idUsuario", function (req, res) {
     partidaController.atualizarPartidas(req, res);
 });
 
+router.get("/receberMaiorPontuacao/:idUsuario", function (req, res) {
+    partidaController.receberMaiorPontuacao(req, res);
+});
+
+router.get("/receberQtdPartidas/:idUsuario", function (req, res) {
+    partidaController.receberQtdPartidas(req, res);
+});
+
 module.exports = router;

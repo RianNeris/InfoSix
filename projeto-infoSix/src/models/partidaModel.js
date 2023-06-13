@@ -48,8 +48,28 @@ function atualizarPartidas(idUsuario) {
     return database.executar(instrucao);
 }
 
+function receberMaiorPontuacao(idUsuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function receberMaiorPontuacao():", idUsuario);
+    var instrucao = `
+        SELECT MAX(pontuacao) as recorde FROM partida WHERE fkUsuario = ${idUsuario};
+     `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function receberQtdPartidas(idUsuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function receberQtdPartidas():", idUsuario);
+    var instrucao = `
+        SELECT COUNT(idPartida) as qtdPartidas FROM partida WHERE fkUsuario = ${idUsuario};
+     `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     cadastrarPartida,
     receberPartidas,
-    atualizarPartidas
+    atualizarPartidas,
+    receberMaiorPontuacao,
+    receberQtdPartidas
 };

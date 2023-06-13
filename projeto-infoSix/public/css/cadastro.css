@@ -11,9 +11,9 @@ html{
 }
 
 body{
-    background-image: url(../assets/imagens/bgLogin.jpg);
+    background-image: url(../assets/image/bgR6S.jpg);
     min-height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -129,5 +129,6 @@ span{
 }
 
 .link-login a{
+    font-family: 'Inter', sans-serif;
     padding: 2px;
 }

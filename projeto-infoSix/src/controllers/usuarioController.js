@@ -8,7 +8,9 @@ function testar(req, res) {
 }
 
 function listar(req, res) {
-    usuarioModel.listar()
+    var email = req.params.email;
+
+    usuarioModel.listar(email)
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);

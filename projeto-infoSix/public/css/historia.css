@@ -1,0 +1,216 @@
+body{
+    background-image: url("../assets/image/bgHome.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/*--Capa Operadores--*/
+
+.capaOperadores img{
+    display: flex;
+    width: 100%;
+}
+
+/*--Container do conteúdo--*/
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    margin: 30px;
+}
+
+#container h1{
+    font-size: 22px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#container p {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+}
+
+#container b {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/*--TOM CLANCY'S--*/
+
+.tomClancys{
+    width: 620px;
+    margin: 38px;
+}
+
+.tomClancys img {
+    width: 160px;
+    height: 220px;
+}
+
+.tomClancys figure span{
+    font-size: 15px;
+    padding: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.tomClancys p {
+    margin-top: 0;
+    margin-right: 60px; 
+}
+
+.tomClancysConteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    margin: 38px;
+}
+
+.tomClancysConteudo figure {
+    border: 5px solid black;
+}
+
+/*--O COMEÇO--*/
+
+.containerComeco{
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    margin: 38px;
+    margin-top: 0;
+
+}
+
+.oComeco{
+    display: flex;
+    flex-direction: column;
+}
+
+.oComeco h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.Img1998 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 20px;  
+}
+
+.Img1998 figcaption {
+    padding: 10px;
+}
+
+.Img1998 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.book {
+    height: 242px;
+    border: 5px solid black;
+}
+
+.game {
+    border: 5px solid black;
+}
+
+/*-- JOGO TÁTICO --*/
+
+.jogoTatico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 620px;
+    margin: 38px;
+}
+
+.jogoTatico img{
+    width: 430px;
+    height: 280px;
+    margin: 30px;
+    border: 5px solid black;
+}
+
+.jogoTatico p{
+    margin-top: 0;
+}
+
+/*-- JOGOS RAINBOW --*/
+
+#conteudoJogos{
+    display: flex;
+    justify-content: center;
+}
+
+.jogosRainbow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    padding: 35px;
+    margin: 5px 40px;
+    border-radius: 8px;
+}
+
+.jogosRainbow p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 10px;
+    color: white;
+    padding: 4px;
+}
+
+.jogosRainbow img {
+    border: 5px solid rgb(0, 0, 0);
+    height: 180px;
+    width: 140px;   
+    margin-bottom: 10px;
+}
+
+/*-- O SIEGE --*/
+
+.oSiege{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 620px;
+    margin: 20px 38px;
+}
+
+.oSiege p{
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+}
+
+.oSiege h1{
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.siege-img{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.oSiege img {
+    border: 5px solid rgb(0, 0, 0);
+    margin: 20px;
+}

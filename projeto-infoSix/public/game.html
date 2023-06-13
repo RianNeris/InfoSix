@@ -5,14 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/image/iconWeb.png">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
-
+    <script src="js/funcoes.js"></script>
     <script defer src="js/game.js"></script>
     
     <title>Brain Rainbow</title>
 </head>
 <body>
+    <div id="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"
+          /></a>
+        </div>
+        <div id="link">
+          <a class="link-nav" href="index.html">Home</a>
+          <a class="separator-bar">|</a>
+          <a class="link-nav" href="historia.html"><b>História</b></a>
+          <a class="separator-bar">|</a>
+          <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+          <a class="separator-bar">|</a>
+          <a class="link-nav" href="game.html">Game</a>
+        </div>
+        <div id="linkLoginCadastro">
+          <a class="link-nav" href="login.html">Entrar</a>
+          <a class="separator-bar">|</a>
+          <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+        </div>
+        <div onclick="toggleMenu()" id="link-login-cadastro-access">
+          Olá <span id="nome_usuario"></span> !
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <a onclick="limparSessao()" class="sub-menu-link">
+                <img src="./assets/image/logout.png" />
+                <h2>Logout</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="containerGame">
     <main>
         <header>
             <span class="player"></span>
@@ -21,7 +57,9 @@
         </header>
 
         <div class="grid"></div>
-        
+
+        <button class="acelerate-button" onclick="vencerAutomaticamente()">Acelerar game</button>
+
         <div class="boxResultado">
             <div class="cardResultado">
                 <div class="txtCard">
@@ -29,10 +67,39 @@
                     <p class="mensagem_resultado"></p>
                 </div>
                 <button class="buttonResult" onclick="window.location.href = 'desempenho.html'">Ver Desempenho</button>
-                <button class="buttonResult">Jogar Novamente</button>
+                <button class="buttonResult" onclick="window.location.reload();">Jogar Novamente</button>
             </div>
         </div>
     </main>
-
+</div>
+<div id="footer">
+    <div class="black-div">
+      <a href="index.html"
+        ><img
+          class="logoFooter"
+          src="assets/image/logoFooter.svg"
+          alt="Logo infoSix"
+      /></a>
+      <div class="contentFooter">
+        <div class="redesSociais">
+          <img href="" src="assets/image/icone-facebook.png" />
+          <img href="" src="assets/image/icone-instagram.png" />
+          <img href="" src="assets/image/icone-twitter.png" />
+          <div class="direitosTxt">
+            <p>Todos direitos são reservados</p>
+            <p>© 2023 Rian Neris</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grey-div">
+      <div class="mensagem">
+        <p>
+          Projeto individual feito com ❤ por Rian Neris | para fins acadêmicos
+        </p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+<script>validarSessao();</script>
