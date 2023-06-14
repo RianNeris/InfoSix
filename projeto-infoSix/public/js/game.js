@@ -39,7 +39,7 @@ const checarFimDeJogo = () => {
         setTimeout(() => {
             clearInterval(this.loop);
             time = `${minutes.innerHTML}:${seconds.innerHTML}`;
-            resultado.innerHTML = `Parabéns, ${sessionStorage.NOME_USUARIO}! Seu tempo foi de: ${time} e suas pontuação foi de: ${pontos.innerHTML} pontos.`
+            resultado.innerHTML = `Parabéns, ${sessionStorage.NOME_USUARIO} ! Seu tempo foi de: ${time} e sua pontuação foi de: ${pontos.innerHTML} pontos.`
             divResultado.style.display = "block"
             cadastrarPartida();
             //window.location = "/desempenho.html";

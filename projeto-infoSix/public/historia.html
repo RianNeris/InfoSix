@@ -1,182 +1,281 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/image/iconWeb.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/historia.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/image/iconWeb.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/historia.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/funcoes.js"></script>
     <title>InfoSix | História</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="navbar">
-        <div class="logo">
-          <a href="index.html"
-            ><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"
-          /></a>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"
+        /></a>
+      </div>
+      <div id="link">
+        <a class="link-nav" href="index.html">Home</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="historia.html"><b>História</b></a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="homeGame.html">Game</a>
+      </div>
+      <div id="linkLoginCadastro">
+        <a class="link-nav" href="login.html">Entrar</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div onclick="toggleMenu()" id="link-login-cadastro-access">
+        Olá <span id="nome_usuario"></span> !
+      </div>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <a onclick="limparSessao()" class="sub-menu-link">
+              <img src="./assets/image/logout.png" />
+              <h2>Logout</h2>
+            </a>
+          </div>
         </div>
-        <div id="link">
-          <a class="link-nav" href="index.html">Home</a>
-          <a class="separator-bar">|</a>
-          <a class="link-nav" href="historia.html"><b>História</b></a>
-          <a class="separator-bar">|</a>
-          <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
-          <a class="separator-bar">|</a>
-          <a class="link-nav" href="game.html">Game</a>
+      </div>
+    </div>
+    <div class="capaOperadores">
+      <img
+        src="assets/image/operadoresCapa.svg"
+        alt="capa do site com os operadores do jogo"
+      />
+    </div>
+    <div id="container">
+      <div class="tomClancys">
+        <h1>COMO SURGIU O GAME TOM CLANCY'S RAINBOW SIX ?</h1>
+        <div class="tomClancysConteudo">
+          <p>
+            As obras de Tom Clancy's Rainbow Six têm origem no mundo dos
+            videogames, mas foram inspiradas pelos romances escritos por Tom
+            Clancy, um renomado autor de suspense militar e espionagem. Tom
+            Clancy co-fundou uma empresa de videogames chamada
+            <b>Red Storm Entertainment</b> em 1996, com o objetivo de criar
+            jogos baseados em suas histórias.
+          </p>
+          <figure>
+            <img
+              src="assets/image/tomClancy.jpg"
+              alt="Tom Clancy, criador da série"
+            />
+            <figcaption>
+              <b><span>Tom Clancy</span></b>
+            </figcaption>
+          </figure>
         </div>
-        <div id="linkLoginCadastro">
-          <a class="link-nav" href="login.html">Entrar</a>
-          <a class="separator-bar">|</a>
-          <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div class="containerComeco">
+        <div class="oComeco">
+          <h2>O COMEÇO</h2>
+          <p class="oComecoTxt">
+            O primeiro jogo da série Rainbow Six foi lançado em 1998 e foi
+            desenvolvido pela <b>Red Storm Entertainment</b> em colaboração com
+            a <b>Ubisoft</b>, uma importante editora de jogos. O jogo foi
+            inspirado no livro de mesmo nome escrito por Tom Clancy em 1998.
+            Tanto o livro quanto o jogo apresentam uma equipe de elite
+            internacional de contra-terrorismo chamada Rainbow, que é liderada
+            pelo personagem John Clark, um personagem recorrente nas obras de
+            Tom Clancy.
+          </p>
         </div>
-        <div onclick="toggleMenu()" id="link-login-cadastro-access">
-          Olá <span id="nome_usuario"></span> !
+        <div class="Img1998">
+          <figure>
+            <img
+              class="game"
+              src="assets/image/primeiroJogo.jpg"
+              alt="primeiro game da série Rainbow Six"
+            />
+            <figcaption>
+              <b>
+                <p>Rainbow Six</p>
+                <p>O Jogo</p>
+                <p>1998</p>
+              </b>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="book"
+              src="assets/image/primeiroLivro.jpg"
+              alt="primeiro livro da série Rainbow Six"
+            />
+            <figcaption>
+              <b>
+                <p>Rainbow Six</p>
+                <p>O Livro</p>
+                <p>1998</p>
+              </b>
+            </figcaption>
+          </figure>
         </div>
-        <div class="sub-menu-wrap" id="subMenu">
-          <div class="sub-menu">
-            <div class="user-info">
-              <a onclick="limparSessao()" class="sub-menu-link">
-                <img src="./assets/image/logout.png" />
-                <h2>Logout</h2>
-              </a>
+      </div>
+      <div class="oComeco">
+        <div class="jogoTatico">
+          <p>
+            O jogo Rainbow Six introduziu um estilo de jogo tático e realista,
+            onde os jogadores precisavam planejar suas missões, controlar
+            múltiplos membros da equipe e lidar com situações de combate
+            intensas. O sucesso do primeiro jogo levou a uma série de sequências
+            e expansões, como Rainbow Six: Rogue Spear, Rainbow Six 3: Raven
+            Shield e muitos outros.
+          </p>
+          <img src="assets/image/telaRainbowAntigo.webp" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="conteudoJogos">
+      <div class="jogosRainbow">
+        <h1>JOGOS DA SÉRIE RAINBOW</h1>
+        <div class="todosJogos">
+          <figure>
+            <img
+              class="RogueSpear"
+              src="assets/image/R6RogueSpear.jpg"
+              alt="Capa do jogo Rainbow Six Rogue Spear"
+            />
+            <figcaption>
+              <p>Rainbow Six</p>
+              <p>Rogue Spear</p>
+              <p>(1999)</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="LoneWolf"
+              src="assets/image/R6LoneWolf.jpg"
+              alt="Capa do jogo Rainbow Six Lone Wolf"
+            />
+            <figcaption>
+              <p>Rainbow Six</p>
+              <p>Lone Wolf</p>
+              <p>(2002)</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="RavenShield"
+              src="assets/image/R6RavenShield.jpg"
+              alt="Capa do jogo Rainbow Six Raven Shield"
+            />
+            <figcaption>
+              <p>Rainbow Six</p>
+              <p>Raven Shield</p>
+              <p>(2003)</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="Vegas"
+              src="assets/image/R6Vegas1.jpg"
+              alt="Capa do jogo Rainbow Six Vegas"
+            />
+            <figcaption>
+              <p>Rainbow Six</p>
+              <p>Vegas</p>
+              <p>(2006)</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              class="VegasDois"
+              src="assets/image/R6Vegas2.jpg"
+              alt="Capa do jogo Rainbow Six Vegas 2"
+            />
+            <figcaption>
+              <p>Rainbow Six</p>
+              <p>Vegas 2</p>
+              <p>(2006)</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="oSiege">
+        <h1>O SIEGE</h1>
+        <div class="oSiegeConteudo">
+          <p>
+            Ao longo dos anos, a série Rainbow Six se expandiu para além dos
+            videogames e se tornou uma marca abrangente, com adaptações para
+            livros, histórias em quadrinhos e até mesmo filmes. A franquia
+            continua a evoluir com o lançamento de novos jogos, como
+            <b>Tom Clancy's Rainbow Six Siege</b>, lançado em 2015, que se
+            tornou incrivelmente popular e competitivo no cenário dos
+            <b>eSports</b>.
+          </p>
+          <div class="siege-img">
+            <img
+              src="assets/image/eSportsR6.jpg"
+              alt="campeonato de rainbow six"
+            />
+          </div>
+        </div>
+        <p>
+          Embora as obras de Tom Clancy tenham fornecido a base para a criação
+          da série Rainbow Six, é importante notar que os jogos expandiram o
+          universo e desenvolveram suas próprias histórias e personagens ao
+          longo do tempo, muitas vezes divergindo dos livros originais de Tom
+          Clancy.
+        </p>
+        <img
+          src="assets/image/R6Siege.jpg"
+          alt="três operadores e o titulo rainbow six siege"
+        />
+      </div>
+    </div>
+    <div class="news"></div>
+    <div id="footer">
+      <div class="black-div">
+        <a href="index.html"
+          ><img
+            class="logoFooter"
+            src="assets/image/logoFooter.svg"
+            alt="Logo infoSix"
+        /></a>
+        <div class="contentFooter">
+          <div class="redesSociais">
+            <img href="https://www.facebook.com/profile.php?id=100010155004885" src="assets/image/icone-facebook.png" />
+            <img href="https://www.instagram.com/" src="assets/image/icone-instagram.png" />
+            <img href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" src="assets/image/icone-twitter.png" />
+            <div class="direitosTxt">
+              <p>Todos direitos são reservados</p>
+              <p>© 2023 Rian Neris</p>
             </div>
           </div>
         </div>
       </div>
-    <div class="capaOperadores">
-        <img src="assets/image/operadoresCapa.svg" alt="capa do site com os operadores do jogo">
+      <div class="grey-div">
+        <div class="mensagem">
+          <p>
+            Projeto individual feito com ❤ por Rian Neris | para fins acadêmicos
+          </p>
+        </div>
+      </div>
     </div>
-    <div id="container">
-        <div class="tomClancys">
-            <h1>COMO SURGIU O GAME TOM CLANCY'S RAINBOW SIX ?</h1>
-            <div class="tomClancysConteudo">
-                <p>As obras de Tom Clancy's Rainbow Six têm origem no mundo dos videogames, mas foram inspiradas pelos romances escritos por Tom Clancy, um renomado autor de suspense militar e espionagem. Tom Clancy co-fundou uma empresa de videogames chamada <b>Red Storm Entertainment</b> em 1996, com o objetivo de criar jogos baseados em suas histórias.</p>
-                <figure>
-                    <img src="assets/image/tomClancy.jpg" alt="Tom Clancy, criador da série">
-                    <figcaption><b><span>Tom Clancy</span></b></figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="containerComeco">
-        <div class="oComeco">
-            <h2>O COMEÇO</h2>   
-            <p class="oComecoTxt">O primeiro jogo da série Rainbow Six foi lançado em 1998 e foi desenvolvido pela <b>Red Storm Entertainment</b> em colaboração com a <b>Ubisoft</b>, uma importante editora de jogos. O jogo foi inspirado no livro de mesmo nome escrito por Tom Clancy em 1998. Tanto o livro quanto o jogo apresentam uma equipe de elite internacional de contra-terrorismo chamada Rainbow, que é liderada pelo personagem John Clark, um personagem recorrente nas obras de Tom Clancy.</p>
-        </div>          
-                <div class="Img1998">
-                    <figure>
-                        <img class="game" src="assets/image/primeiroJogo.jpg" alt="primeiro game da série Rainbow Six">
-                        <figcaption>
-                            <b>
-                                <p>Rainbow Six</p>
-                                <p>O Jogo</p>
-                                <p>1998</p>
-                            </b>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img class="book" src="assets/image/primeiroLivro.jpg" alt="primeiro livro da série Rainbow Six">
-                        <figcaption>
-                            <b>
-                                <p>Rainbow Six</p>
-                                <p>O Livro</p>
-                                <p>1998</p>
-                            </b>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        <div class="oComeco">  
-            <div class="jogoTatico">
-                <p>O jogo Rainbow Six introduziu um estilo de jogo tático e realista, onde os jogadores precisavam planejar suas missões, controlar múltiplos membros da equipe e lidar com situações de combate intensas. O sucesso do primeiro jogo levou a uma série de sequências e expansões, como Rainbow Six: Rogue Spear, Rainbow Six 3: Raven Shield e muitos outros.</p>
-                <img src="assets/image/telaRainbowAntigo.webp" alt="">
-            </div>
-        </div>
-        </div>
-        <div id="conteudoJogos">
-            <div class="jogosRainbow">
-                <figure>
-                    <img class="RogueSpear" src="assets/image/R6RogueSpear.jpg" alt="Capa do jogo Rainbow Six Rogue Spear">
-                    <figcaption>
-                        <p>Rainbow Six</p>
-                        <p>Rogue Spear</p>
-                        <p>(1999)</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img class="LoneWolf" src="assets/image/R6LoneWolf.jpg" alt="Capa do jogo Rainbow Six Lone Wolf">
-                    <figcaption>
-                        <p>Rainbow Six</p>
-                        <p>Lone Wolf</p>
-                        <p>(2002)</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img class="RavenShield" src="assets/image/R6RavenShield.jpg" alt="Capa do jogo Rainbow Six Raven Shield">
-                    <figcaption>
-                        <p>Rainbow Six</p>
-                        <p>Raven Shield</p>
-                        <p>(2003)</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img class="Vegas" src="assets/image/R6Vegas1.jpg" alt="Capa do jogo Rainbow Six Vegas">
-                    <figcaption>
-                        <p>Rainbow Six</p>
-                        <p>Vegas</p>
-                        <p>(2006)</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img class="VegasDois" src="assets/image/R6Vegas2.jpg" alt="Capa do jogo Rainbow Six Vegas 2">
-                    <figcaption>
-                        <p>Rainbow Six</p>
-                        <p>Vegas 2</p>
-                        <p>(2006)</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <div id="container">
-        <div class="oSiege">
-            <h1>O SIEGE</h1>
-                <div class="oSiegeConteudo">
-                <p>Ao longo dos anos, a série Rainbow Six se expandiu para além dos videogames e se tornou uma marca abrangente, com adaptações para livros, histórias em quadrinhos e até mesmo filmes. A franquia continua a evoluir com o lançamento de novos jogos, como <b>Tom Clancy's Rainbow Six Siege</b>, lançado em 2015, que se tornou incrivelmente popular e competitivo no cenário dos <b>eSports</b>.</p>
-                    <div class="siege-img">
-                        <img src="assets/image/eSportsR6.jpg" alt="campeonato de rainbow six">
-                    </div>
-                </div>
-                <p>Embora as obras de Tom Clancy tenham fornecido a base para a criação da série Rainbow Six, é importante notar que os jogos expandiram o universo e desenvolveram suas próprias histórias e personagens ao longo do tempo, muitas vezes divergindo dos livros originais de Tom Clancy.</p>
-                <img src="assets/image/R6Siege.jpg" alt="três operadores e o titulo rainbow six siege">
-        </div>
-    </div>
-    <div class="news"></div>
-    <div id="footer">
-        <div class="black-div">
-            <a href="index.html"><img class="logoFooter" src="assets/image/logoFooter.svg" alt="Logo infoSix"></a>
-            <div class="contentFooter">
-                <div class="redesSociais">
-                    <img href="" src="assets/image/icone-facebook.png" >
-                    <img href="" src="assets/image/icone-instagram.png" >
-                    <img href="" src="assets/image/icone-twitter.png" >
-                    <div class="direitosTxt">
-                        <p>Todos direitos são reservados</p>
-                        <p>© 2023 Rian Neris</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="grey-div">
-            <div class="mensagem">
-                <p>Projeto individual feito com ❤ por Rian Neris  | para fins acadêmicos</p>
-            </div>
-        </div>
-    </div>
-</body>
+  </body>
 </html>
-<script>validarSessao();</script>
+<script>
+  validarSessao();
 
+  let subMenu = document.getElementById("subMenu");
+
+  function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+  }
+</script>

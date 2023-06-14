@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/image/iconWeb.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homeGame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap"rel="stylesheet"/>
+  <script type="text/javascript" src="js/funcoes.js"></script>
+    <title>InfoSix | Home game</title>
+</head>
+<div id="navbar">
+    <div class="logo">
+      <a href="index.html"
+        ><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"
+      /></a>
+    </div>
+    <div id="link">
+      <a class="link-nav" href="index.html">Home</a>
+      <a class="separator-bar">|</a>
+      <a class="link-nav" href="historia.html">História</a>
+      <a class="separator-bar">|</a>
+      <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
+      <a class="separator-bar">|</a>
+      <a class="link-nav" href="homeGame.html"><b>Game</b></a>
+    </div>
+    <div id="linkLoginCadastro">
+      <a class="link-nav" href="login.html">Entrar</a>
+      <a class="separator-bar">|</a>
+      <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+    </div>
+    <div onclick="toggleMenu()" id="link-login-cadastro-access">
+      Olá <span id="nome_usuario"></span> !
+    </div>
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <a onclick="limparSessao()" class="sub-menu-link">
+            <img src="./assets/image/logout.png" />
+            <h2>Logout</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="container-jogo">
+        <div class="conteudo-jogo">
+            <img class="brainImg" src="./assets/image/brain.png" alt="logo brain game">
+            <h1 class="tituloBrain">BEM VINDOS AO BRAIN GAME</h1>
+            <div class="cardGameTxt">
+                <h2>O QUE É O BRAIN GAME?</h2>
+                <p>Brain Game é um jogo da memória temático de Rainbow Six onde você pode treinar suas habilidades de memorização e bater seu prórpio recorde se desafiando cada vez mais e acompanhando seu desempenho por meio de um gráfico de desempenho.</p>
+                <h2>COMO FUNCIONA?</h2>
+                <img class="telaGame" src="./assets/image/Captura de Tela (66).png" alt="tela do jogo da memória">
+                <p>No jogo tem 20 cartas espalhadas de forma aleatória e seu objetivo é encontrar todos os pares iguais em menor tempo possível</p>
+                <p>Para <b>cada par encontrado</b> você recebe <b style="color:green">+ 10 pontos</b> e a cada <b>20 segundos</b> que se passam você perde <b style="color:red">- 5 pontos</b></p>
+            </div>
+            <button onclick="window.location.href = 'game.html'" class="buttonPlay">JOGAR</button>
+            <button onclick="window.location.href = 'desempenho.html'" class="buttonDesempenho">DESEMPENHO</button>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="black-div">
+            <a href="cadastro.html"><img class="logoFooter" src="assets/image/logoFooter.svg" alt="Logo infoSix"></a>
+            <div class="contentFooter">
+                <div class="redesSociais">
+                    <img href="https://www.facebook.com/profile.php?id=100010155004885" src="assets/image/icone-facebook.png" >
+                    <img href="https://www.instagram.com/" src="assets/image/icone-instagram.png" >
+                    <img href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" src="assets/image/icone-twitter.png" >
+                    <div class="direitosTxt">
+                        <p>Todos direitos são reservados</p>
+                        <p>© 2023 Rian Neris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grey-div">
+            <div class="mensagem">
+                <p>Projeto individual feito com ❤ por Rian Neris  | para fins acadêmicos</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    validarSessao();
+</script>

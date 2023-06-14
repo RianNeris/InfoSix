@@ -8,12 +8,23 @@ CREATE TABLE usuario (
   senha varchar(50)
 );
 
+INSERT INTO usuario VALUES 
+('Rian Neris','rian@gmail.com','12345678');
+
+
 CREATE TABLE partida (
 idPartida INT PRIMARY KEY auto_increment,
 pontuacao INT,
 tempo VARCHAR(45),
 fkUsuario INT,
-constraint fk_partida_usuario FOREIGN KEY (fkUsuario) REFERENCES usuario (id));
+constraint fk_partida_usuario FOREIGN KEY (fkUsuario) REFERENCES usuario (idUsuario));
+
+INSERT INTO partida VALUES 
+(null,35,'2:10',1),
+(null,45,'1:80',1),
+(null,55,'1:60',1),
+(null,85,'1:10',1),
+(null,95,'00:50',1);
 
 SHOW TABLES;
 

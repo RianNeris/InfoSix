@@ -11,7 +11,7 @@
     <script src="js/funcoes.js"></script>
     <script defer src="js/game.js"></script>
     
-    <title>Brain Rainbow</title>
+    <title>InfoSix | Brain game</title>
 </head>
 <body>
     <div id="navbar">
@@ -27,7 +27,7 @@
           <a class="separator-bar">|</a>
           <a class="link-nav" href="sobre-mim.html">Sobre mim</a>
           <a class="separator-bar">|</a>
-          <a class="link-nav" href="game.html">Game</a>
+          <a class="link-nav" href="homeGame.html">Game</a>
         </div>
         <div id="linkLoginCadastro">
           <a class="link-nav" href="login.html">Entrar</a>
@@ -82,9 +82,9 @@
       /></a>
       <div class="contentFooter">
         <div class="redesSociais">
-          <img href="" src="assets/image/icone-facebook.png" />
-          <img href="" src="assets/image/icone-instagram.png" />
-          <img href="" src="assets/image/icone-twitter.png" />
+          <img href="https://www.facebook.com/profile.php?id=100010155004885" src="assets/image/icone-facebook.png" />
+          <img href="https://www.instagram.com/" src="assets/image/icone-instagram.png" />
+          <img href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" src="assets/image/icone-twitter.png" />
           <div class="direitosTxt">
             <p>Todos direitos são reservados</p>
             <p>© 2023 Rian Neris</p>
@@ -102,4 +102,14 @@
   </div>
 </body>
 </html>
-<script>validarSessao();</script>
+<script>
+
+  validarSessao();
+
+  let subMenu = document.getElementById("subMenu");
+
+  function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+  }
+
+</script>

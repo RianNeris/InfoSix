@@ -1,105 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/image/iconWeb.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sobre-mim.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap" rel="stylesheet">
-    
-    <title>InfoSix | Saiba mais</title>
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/image/iconWeb.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre-mim.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jockey+One&family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/funcoes.js"></script>
+    <title>InfoSix | Sobre mim</title>
+  </head>
+  <body>
     <div id="navbar">
-        <div class="logo">
-                <a href="index.html"><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"></a>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="assets/image/Logo-navbar.svg" alt="Logo do site InfoSix"
+        /></a>
+      </div>
+      <div id="link">
+        <a class="link-nav" href="index.html">Home</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="historia.html">História</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="sobre-mim.html"><b>Sobre mim</b></a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="homeGame.html">Game</a>
+      </div>
+      <div id="linkLoginCadastro">
+        <a class="link-nav" href="login.html">Entrar</a>
+        <a class="separator-bar">|</a>
+        <a class="link-nav" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div onclick="toggleMenu()" id="link-login-cadastro-access">
+        Olá <span id="nome_usuario"></span> !
+      </div>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <a onclick="limparSessao()" class="sub-menu-link">
+              <img src="./assets/image/logout.png" />
+              <h2>Logout</h2>
+            </a>
+          </div>
         </div>
-            <div id="link">  
-                <a class="link-nav" href="index.html">Home</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="index.html">História</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="sobre-mim.html"><b>Sobre mim</b></a>
-            </div>
-            <div id="linkLoginCadastro">
-                <a class="link-nav" href="login.html">Entrar</a>
-                <a class="separator-bar">|</a>
-                <a class="link-nav" href="cadastro.html">Cadastre-se</a>
-            </div>
+      </div>
     </div>
     <div id="container-sobre-mim">
-        <h1 class="titulo-sobre-mim">Sobre mim</h1>
+      <div class="txt">
+        <h1 class="titulo-sobre-mim">SOBRE MIM</h1>
         <p>
-            Meu nome é Rian Neris e sou o criador desse site. E agora vocês conheceram 
-            um pouco da minha história e minha relação com os games, e com o jogo
-            Rainbow Six especifícamente. Desde de muito novo eu era ligado em jogos, e
-            gostava de tudo que me parecia desafiador e talvez competitivo, desde 
-            brincar de pega-pega até um joken-pô eu tentava encontrar alguma forma de 
-            tornar aquilo um desafio pra mim, atraindo mais a minha atenção. Conforme 
-            fui crescendo tive contato com meus primeiros jogos em um videogame, minha 
-            primeira experiência foi jogando um super nintendo ou "nintendinho" (para 
-            os mais intimos), que meus irmãos mais velhos tinham ganhado de presente 
-            na época, lembro claramente de mal saber oque cada botão fazia, porém
-            minha diversão era saber que eu estava jogando, idependente se estava 
-            jogando certo ou não eu estava ali me divertindo.
+          Meu nome é Rian Neris e sou o criador desse site. E agora vocês
+          conheceram um pouco da minha história e minha relação com os games, e
+          com o jogo Rainbow Six especifícamente. Desde de muito novo eu era
+          ligado em jogos, e gostava de tudo que me parecia desafiador e talvez
+          competitivo, desde brincar de pega-pega até um joken-pô eu tentava
+          encontrar alguma forma de tornar aquilo um desafio pra mim, atraindo
+          mais a minha atenção. Conforme fui crescendo tive contato com meus
+          primeiros jogos em um videogame, minha primeira experiência foi
+          jogando um super nintendo ou "nintendinho" (para os mais intimos), que
+          meus irmãos mais velhos tinham ganhado de presente na época, lembro
+          claramente de mal saber oque cada botão fazia, porém minha diversão
+          era saber que eu estava jogando, idependente se estava jogando certo
+          ou não eu estava ali me divertindo.
         </p>
         <p>
-            Mas e o Rainbow Six ? Como eu cheguei até esse jogo e oque me atraiu nele ?
-            Eu conheci o Rainbow Six em meados de 2017/2018 atráves de alguns videos 
-            feito por criadores de conteúdo que eu já acompanhava e estavam jogando ele,
-            e me interessei muito pela proposta do jogo, que é algo mais voltado para
-            a estratégia e combinação de diferentes habilidades de cada integrante do
-            time, era algo diferente de tudo que já tinha visto, esse estilo diferente
-            despertou aquele instinto desafiador e competitivo que eu já tinha comentado
-            antes. Só a algum tempo depois de ter conhecido o jogo que eu fui realmente
-            jogar ele, e não foi diferente do que eu tinha pensado, eu me apaixonei pelo
-            o jogo. E não demorou muito para que os criadores dele promovessem
-            campeonatos e que surgissem profissionais, esse foi um passo importante
-            e que alavancou muito o game e tornou ele mais conhecido e que também me atraiu
-            pra mais perto, despertando o meu lado competitivo.
+          Mas e o Rainbow Six ? Como eu cheguei até esse jogo e oque me atraiu
+          nele ? Eu conheci o Rainbow Six em meados de 2017/2018 atráves de
+          alguns videos feito por criadores de conteúdo que eu já acompanhava e
+          estavam jogando ele, e me interessei muito pela proposta do jogo, que
+          é algo mais voltado para a estratégia e combinação de diferentes
+          habilidades de cada integrante do time, era algo diferente de tudo que
+          já tinha visto, esse estilo diferente despertou aquele instinto
+          desafiador e competitivo que eu já tinha comentado antes. Só a algum
+          tempo depois de ter conhecido o jogo que eu fui realmente jogar ele, e
+          não foi diferente do que eu tinha pensado, eu me apaixonei pelo o
+          jogo. E não demorou muito para que os criadores dele promovessem
+          campeonatos e que surgissem profissionais, esse foi um passo
+          importante e que alavancou muito o game e tornou ele mais conhecido e
+          que também me atraiu pra mais perto, despertando o meu lado
+          competitivo.
         </p>
         <p>
-            Durante o tempo que eu jogava o jogo com os meus amigos eu percebia que 
-            o estilo do jogo por ser em equipe ou em times, e ser necessário uma estratégia
-            para vencer, ele estimulava muito o trabalho em equipe e a capacidade de
-            liderar ou se organizar para um mesmo objetivo, a vitória. Eu acredito
-            que o jogo foi sim um dos responsáveis por melhorar minha capacidade de trabalhar 
-            em times ou em equipes, usando a habilidade de cada um para um único benefício do 
-            time, isso é Rainbow Six !!!
+          Durante o tempo que eu jogava o jogo com os meus amigos eu percebia
+          que o estilo do jogo por ser em equipe ou em times, e ser necessário
+          uma estratégia para vencer, ele estimulava muito o trabalho em equipe
+          e a capacidade de liderar ou se organizar para um mesmo objetivo, a
+          vitória. Eu acredito que o jogo foi sim um dos responsáveis por
+          melhorar minha capacidade de trabalhar em times ou em equipes, usando
+          a habilidade de cada um para um único benefício do time, isso é
+          Rainbow Six !!!
         </p>
-        <div id="midias-sobre-mim">
-            <img id="foto-rian" src="assets/image/fotoRian.jpeg">
-            <video preload="preload" loop="loop" autoplay="autoplay" controls="controls" muted>
-                <source  src="assets/gifBR6-1.mp4" type="video/mp4">
-                <p>Your browser doesn't support HTML5 video. Here is a</p>
-            </video>
-        </div>
-    </div>                                      
-    <div id="footer">
-        <div class="black-div">
-            <a href="cadastro.html"><img class="logoFooter" src="assets/image/logoFooter.svg" alt="Logo infoSix"></a>
-            <div class="contentFooter">
-                <div class="redesSociais">
-                    <img href="" src="assets/image/icone-facebook.png" >
-                    <img href="" src="assets/image/icone-instagram.png" >
-                    <img href="" src="assets/image/icone-twitter.png" >
-                    <div class="direitosTxt">
-                        <p>Todos direitos são reservados</p>
-                        <p>© 2023 Rian Neris</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="grey-div">
-            <div class="mensagem">
-                <p>Projeto individual feito com ❤ por Rian Neris | para fins acadêmicos</p>
-            </div>
-        </div>
+      </div>
+      <div id="midias-sobre-mim">
+        <img id="foto-rian" src="assets/image/fotoRian.jpeg" />
+        <video
+          preload="preload"
+          loop="loop"
+          autoplay="autoplay"
+          controls="controls"
+          muted
+        >
+          <source src="assets/gifBR6-1.mp4" type="video/mp4" />
+          <p>Your browser doesn't support HTML5 video. Here is a</p>
+        </video>
+      </div>
     </div>
-</body>
+    <div id="footer">
+      <div class="black-div">
+        <a href="index.html"
+          ><img
+            class="logoFooter"
+            src="assets/image/logoFooter.svg"
+            alt="Logo infoSix"
+        /></a>
+        <div class="contentFooter">
+          <div class="redesSociais">
+            <img href="https://www.facebook.com/profile.php?id=100010155004885" src="assets/image/icone-facebook.png" />
+            <img href="https://www.instagram.com/" src="assets/image/icone-instagram.png" />
+            <img href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" src="assets/image/icone-twitter.png" />
+            <div class="direitosTxt">
+              <p>Todos direitos são reservados</p>
+              <p>© 2023 Rian Neris</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grey-div">
+        <div class="mensagem">
+          <p>
+            Projeto individual feito com ❤ por Rian Neris | para fins acadêmicos
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+<script>
+  validarSessao();
+
+  let subMenu = document.getElementById("subMenu");
+
+  function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+  }
+</script>

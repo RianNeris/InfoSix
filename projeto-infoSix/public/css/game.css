@@ -101,7 +101,7 @@ header {
     align-items: center ;
     position: absolute;
     top: 30%;
-    left: 36%;
+    left: 31.5%;
 }
 
 .cardResultado {
@@ -110,7 +110,7 @@ header {
     display: block;
     background-color: #b5b5b5;
     color: #0e1219;
-    width: 400px;
+    width: 500px;
     border-radius: 4px;
     border: #ffffff 3px solid;
     padding: 30px;
